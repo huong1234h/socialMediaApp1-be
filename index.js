@@ -66,4 +66,5 @@ app.use("/api/notifications",notificationRoutes);
 
 app.listen(process.env.PORT, () => {
   console.log("API working!");
+  
 });
