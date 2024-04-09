@@ -51,7 +51,8 @@ export const login = (req, res) => {
     res
       .cookie("accessToken", token, {
         httpOnly: true,
-        secure: true, // Only set secure flag if using HTTPS in production
+        secure: true,
+        sameSite:"none"// Only set secure flag if using HTTPS in production
          // Mitigate CSRF attacks (consider additional CSRF protection)
       })
       .status(200)
