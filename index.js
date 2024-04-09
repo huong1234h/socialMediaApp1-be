@@ -33,7 +33,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: process.env.URL_REACT,
-    credentials: true,
+    credentials: 'include',
   })
 );
 app.use(cookieParser());
