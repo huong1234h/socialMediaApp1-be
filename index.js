@@ -1,9 +1,9 @@
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import 'dotenv/config';
-import { db } from "./connect.js";
 import express from "express";
 import multer from "multer";
+import { db } from "./connect.js";
 import authRoutes from "./routes/auth.js";
 import commentRoutes from "./routes/comments.js";
 import conversationRoutes from "./routes/conversations.js";
@@ -33,6 +33,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: process.env.URL_REACT,
+    credentials: true,
   })
 );
 app.use(cookieParser());
