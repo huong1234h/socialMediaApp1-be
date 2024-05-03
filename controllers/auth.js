@@ -56,7 +56,7 @@ export const login = (req, res) => {
          // Mitigate CSRF attacks (consider additional CSRF protection)
       })
       .status(200)
-      .json({ message: "Login successful!", user: { ...data[0] } }); // Optionally send sanitized user data
+      .json({...data[0]}); // Optionally send sanitized user data
   });
 };
 
