@@ -44,7 +44,7 @@ app.use(cookieParser()); // Parse cookies from requests
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     try {
-      cb(null, "../client/public/upload"); // Change path if needed
+      cb(null, "./public/upload"); // Change path if needed
     } catch (error) {
       console.error("Error creating upload directory:", error);
       cb(error, null);
