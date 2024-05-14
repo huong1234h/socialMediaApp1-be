@@ -64,6 +64,7 @@ const upload = multer({ storage: storage });
 
 // Upload route handler
 app.post("/api/upload", upload.single("file"), (req, res) => {
+  console.log(req);
   const file = req.file;
   console.log(file);
   if (file) {
