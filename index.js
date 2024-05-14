@@ -65,6 +65,7 @@ const upload = multer({ storage: storage });
 // Upload route handler
 app.post("/api/upload", upload.single("file"), (req, res) => {
   const file = req.file;
+  console.log(file);
   if (file) {
     res.status(200).json(file.filename); // Respond with filename on success
   } else {
